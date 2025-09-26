@@ -10,6 +10,7 @@ public class FinancialCalculators {
 
     public static void main(String[] args) {
 
+        // Prompting the user for input on what calculator to use (1-3)
         System.out.print("What calculator would you like to use? (1-3) \n 1. Mortgage \n 2. Future Value \n 3. Present Value \n Enter here: ");
         int calculatorSelect = keyboard.nextInt();
 
@@ -29,12 +30,12 @@ public class FinancialCalculators {
             presentValueCalculator();
         }
     }
-
+    // Calculator program for calculating mortgage loans
     public static void mortgageCalculator() {
 
-        System.out.println("=== Mortgage Calculator ===");
-        System.out.println(" ");
+        System.out.println("=====[Mortgage Calculator]=====");
 
+        // Prompts asking the user for loan amount, interest rate, and loan term (years)
         System.out.print("Enter your loan amount: $");
         double loanPrincipal = keyboard.nextDouble();
 
@@ -44,19 +45,52 @@ public class FinancialCalculators {
         System.out.print("Enter the loan term in years: ");
         double loanTerm = keyboard.nextDouble();
 
+        //Converting annualInterestRate into decimal form and calculating the monthly interest rate
         double monthlyInterestRate = annualInterestRate / 100.0 / 12;
         double countMonthlyPayments = loanTerm * 12;
 
         // Monthly payment calculated using formula: M = P (i * (1 + i)^n / ( (1 + i)^n -1)
         double monthlyPayment = loanPrincipal * (monthlyInterestRate * Math.pow(1 + monthlyInterestRate,countMonthlyPayments)) / (Math.pow(1 + monthlyInterestRate,countMonthlyPayments) - 1);
 
-        System.out.printf("Your monthly loan payment is: $%.2f",monthlyPayment);
+        // Total interest calculated using formula (M * n) - P
+        double totalInterest = (monthlyPayment * countMonthlyPayments) - loanPrincipal;
+
+        // Final print out of loan details including the monthly payment amount and total interest on the loan
+        System.out.printf("============[LOAN DETAILS]============ \n Your monthly loan payment is: $%.2f",monthlyPayment);
+        System.out.println();
+        System.out.printf("====================================== \n Your total interest is: $%.2f",totalInterest);
+        System.out.println();
+        System.out.print("======================================");
 
     }
     public static void futureValueCalculator() {
 
+        System.out.println("=====[Future Value Calculator]=====");
+
+        System.out.print("Enter your deposit amount: $");
+        double depositAmount = keyboard.nextDouble();
+
+        System.out.print("Enter your interest rate: ");
+        double interestRate = keyboard.nextDouble();
+
+        System.out.print("Enter the amount of years: ");
+        double yearsTotal = keyboard.nextDouble();
+
+        interestRate = interestRate / 100.0;
+        double futureValue = depositAmount * Math.pow(1 + (interestRate / 365),(365 * yearsTotal));
+
+        double interestEarned = futureValue - depositAmount;
+
+        System.out.printf("============[CD Future Value]============ \n Future value of CD: $%.2f",futureValue);
+        System.out.println();
+        System.out.printf("========================================= \n Interest earned: $%.2f",interestEarned);
+        System.out.println();
+        System.out.print("=========================================");
+
     }
     public static void presentValueCalculator() {
+
+        System.out.println("=====[Present Value Calculator]=====");
 
     }
 }
