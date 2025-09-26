@@ -63,7 +63,7 @@ public class FinancialCalculators {
         System.out.print("======================================");
 
     }
-    public static void futureValueCalculator() {
+    public static double futureValueCalculator() {
 
         System.out.println("=====[Future Value Calculator]=====");
 
@@ -87,10 +87,36 @@ public class FinancialCalculators {
         System.out.println();
         System.out.print("=========================================");
 
+        return futureValue;
+
     }
     public static void presentValueCalculator() {
 
         System.out.println("=====[Present Value Calculator]=====");
+
+        System.out.print("Enter monthly payout: ");
+        double monthlyPayout = keyboard.nextDouble();
+
+        System.out.print("Enter your interest rate: ");
+        double expectedRate = keyboard.nextDouble();
+
+        System.out.print("Enters years to pay out: ");
+        double yearsPayout = keyboard.nextDouble();
+
+        double futureValueCalc = futureValueCalculator();
+
+        expectedRate = expectedRate / 100.0;
+
+        double monthlyRate = expectedRate / 100.0 / 12;
+        double numberOfPeriods = yearsPayout * 12;
+
+        double presentValueCalc = futureValueCalc / Math.pow((1 +(monthlyRate / numberOfPeriods)),(numberOfPeriods));
+
+        System.out.printf("============[Present Value]============ \n Present Value: $%.2f",presentValueCalc);
+
+
+
+
 
     }
 }

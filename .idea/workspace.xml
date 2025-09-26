@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63c92f42-c34d-4181-9f76-f8cb4af88aee" name="Changes" comment="Second commit, implemented function for the monthly payment for the mortgage calculator. Working on total interest next.">
+    <list default="true" id="63c92f42-c34d-4181-9f76-f8cb4af88aee" name="Changes" comment="Third commit. Implemented future value calculator with all functions, user input, future value calculation, total interest calculation, and results printed out to console.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/FinancialCalculators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/FinancialCalculators.java" afterDir="false" />
     </list>
@@ -77,12 +77,21 @@
       <option name="project" value="LOCAL" />
       <updated>1758910167265</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Third commit. Implemented future value calculator with all functions, user input, future value calculation, total interest calculation, and results printed out to console.">
+      <option name="closed" value="true" />
+      <created>1758913020595</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1758913020595</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit for financial calculator workshop. Created package, classes, and 3 empty calculator methods" />
     <MESSAGE value="Second commit, implemented function for the monthly payment for the mortgage calculator. Working on total interest next." />
-    <option name="LAST_COMMIT_MESSAGE" value="Second commit, implemented function for the monthly payment for the mortgage calculator. Working on total interest next." />
+    <MESSAGE value="Third commit. Implemented future value calculator with all functions, user input, future value calculation, total interest calculation, and results printed out to console." />
+    <option name="LAST_COMMIT_MESSAGE" value="Third commit. Implemented future value calculator with all functions, user input, future value calculation, total interest calculation, and results printed out to console." />
   </component>
 </project>
