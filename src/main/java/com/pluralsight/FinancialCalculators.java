@@ -65,6 +65,8 @@ public class FinancialCalculators {
     }
     public static double futureValueCalculator() {
 
+        // ADD COMMENTS
+
         System.out.println("=====[Future Value Calculator]=====");
 
         System.out.print("Enter your deposit amount: $");
@@ -92,6 +94,10 @@ public class FinancialCalculators {
     }
     public static void presentValueCalculator() {
 
+        // Work in progress, currently working on making the correct formula for funding an annuity
+        // I believe this is the right formula, C * [1 - (1 + r)^-n]/r
+        // This calculator calls the future value method get the future value calculation
+
         System.out.println("=====[Present Value Calculator]=====");
 
         System.out.print("Enter monthly payout: ");
@@ -113,9 +119,6 @@ public class FinancialCalculators {
         double presentValueCalc = futureValueCalc / Math.pow((1 +(monthlyRate / numberOfPeriods)),(numberOfPeriods));
 
         System.out.printf("============[Present Value]============ \n Present Value: $%.2f",presentValueCalc);
-
-
-
 
 
     }
